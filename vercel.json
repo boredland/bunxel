@@ -1,5 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "installCommand": "rm -rf ~/.bun/install/cache && curl -fsSL https://bun.sh/install | bash && ~/.bun/bin/bun install --frozen-lockfile --cache-dir $(yarn cache dir)/bun --verbose",
+  "installCommand": "rm -rf $(yarn cache dir) && curl -fsSL https://bun.sh/install | bash && ~/.bun/bin/bun install --frozen-lockfile --yarn --cache-dir $(yarn cache dir)/bun --verbose",
   "buildCommand": "~/.bun/bin/bun run build"
 }
